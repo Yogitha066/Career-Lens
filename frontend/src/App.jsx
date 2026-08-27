@@ -418,10 +418,16 @@ async function handleViewResults() {
     }
 
     const analyses = Array.isArray(data)
-      ? data
-      : data.analyses || [];
+  ? data
+  : data.analyses || [];
 
-    setSavedAnalyses(analyses);
+const latestAnalysis = analyses.length > 0
+  ? analyses[0]
+  : null;
+
+setSavedAnalyses(
+  latestAnalysis ? [latestAnalysis] : []
+);
 
     if (analyses.length === 0) {
       setResultsMessage(

@@ -281,26 +281,13 @@ def login(
 # JOB ROLES
 # =========================================================
 
+# =========================================================
+# JOB ROLES AND REQUIRED SKILLS
+# =========================================================
+
 JOB_ROLES = {
 
-    "Java Backend Developer": [
-        "Java",
-        "Spring Boot",
-        "SQL",
-        "Git",
-        "REST API",
-        "Docker"
-    ],
-
-    "Python Backend Developer": [
-        "Python",
-        "FastAPI",
-        "SQL",
-        "Git",
-        "REST API",
-        "Docker"
-    ],
-
+    # ---------------- FRONTEND ----------------
     "Frontend Developer": [
         "HTML",
         "CSS",
@@ -309,38 +296,306 @@ JOB_ROLES = {
         "Git"
     ],
 
+    "Web Developer": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Git"
+    ],
+
+    "UI Developer": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Git"
+    ],
+
+    # ---------------- BACKEND ----------------
+    "Python Developer": [
+        "Python",
+        "FastAPI",
+        "SQL",
+        "REST API",
+        "Git"
+    ],
+
+    "Backend Developer": [
+        "Python",
+        "FastAPI",
+        "SQL",
+        "REST API",
+        "Git"
+    ],
+
+    "Java Developer": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "REST API",
+        "Git"
+    ],
+
+    # ---------------- FULL STACK ----------------
+    "Full Stack Developer": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Python",
+        "SQL",
+        "REST API",
+        "Git"
+    ],
+
+    # ---------------- DATA ----------------
     "Data Analyst": [
         "Python",
         "SQL",
         "Excel",
         "Power BI",
         "Statistics"
+    ],
+
+    "Data Scientist": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "Statistics",
+        "Machine Learning"
+    ],
+
+    # ---------------- AI / ML ----------------
+    "Machine Learning Engineer": [
+        "Python",
+        "Machine Learning",
+        "Statistics",
+        "TensorFlow",
+        "PyTorch",
+        "SQL",
+        "Git"
+    ],
+
+    "AI/ML Engineer": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "TensorFlow",
+        "PyTorch",
+        "SQL",
+        "Git"
+    ],
+
+    "AI Engineer": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "TensorFlow",
+        "PyTorch",
+        "SQL",
+        "Git"
+    ],
+
+    # ---------------- SOFTWARE ----------------
+    "Software Engineer": [
+        "Python",
+        "SQL",
+        "Git",
+        "REST API",
+        "Data Structures and Algorithms"
+    ],
+
+    "Software Developer": [
+        "Python",
+        "SQL",
+        "Git",
+        "REST API",
+        "Data Structures and Algorithms"
+    ],
+
+    # ---------------- DEVOPS / CLOUD ----------------
+    "DevOps Engineer": [
+        "Linux",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "AWS"
+    ],
+
+    "Cloud Engineer": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "Linux",
+        "Docker"
+    ],
+
+    # ---------------- DATABASE ----------------
+    "Database Developer": [
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        "Git"
+    ],
+
+    "Database Administrator": [
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        "Linux"
+    ],
+
+    # ---------------- CYBERSECURITY ----------------
+    "Cybersecurity Analyst": [
+        "Linux",
+        "Networking",
+        "Python",
+        "SQL"
+    ],
+
+    # ---------------- MOBILE ----------------
+    "Mobile App Developer": [
+        "JavaScript",
+        "React",
+        "Git"
     ]
 }
 
 
 # =========================================================
-# GET JOB REQUIREMENTS
+# ROLE ALIASES
 # =========================================================
 
+ROLE_ALIASES = {
+
+    # Frontend
+    "frontend": "Frontend Developer",
+    "front end": "Frontend Developer",
+    "front-end": "Frontend Developer",
+    "frontend engineer": "Frontend Developer",
+    "front end engineer": "Frontend Developer",
+    "front-end engineer": "Frontend Developer",
+    "ui developer": "UI Developer",
+    "ui engineer": "UI Developer",
+    "web developer": "Web Developer",
+    "web engineer": "Web Developer",
+
+    # Backend
+    "backend": "Backend Developer",
+    "back end": "Backend Developer",
+    "back-end": "Backend Developer",
+    "backend engineer": "Backend Developer",
+    "back end engineer": "Backend Developer",
+    "back-end engineer": "Backend Developer",
+    "python": "Python Developer",
+    "python engineer": "Python Developer",
+    "python backend developer": "Python Developer",
+    "python backend engineer": "Python Developer",
+
+    # Java
+    "java engineer": "Java Developer",
+    "java backend developer": "Java Developer",
+    "java backend engineer": "Java Developer",
+
+    # Full stack
+    "fullstack": "Full Stack Developer",
+    "full-stack": "Full Stack Developer",
+    "full stack": "Full Stack Developer",
+    "fullstack developer": "Full Stack Developer",
+    "full-stack developer": "Full Stack Developer",
+    "full stack engineer": "Full Stack Developer",
+
+    # Data
+    "data analysis": "Data Analyst",
+    "data analytics": "Data Analyst",
+    "data analyst": "Data Analyst",
+
+    "data science": "Data Scientist",
+    "data scientist": "Data Scientist",
+
+    # AI / ML
+    "ml engineer": "Machine Learning Engineer",
+    "machine learning engineer": "Machine Learning Engineer",
+    "ml developer": "Machine Learning Engineer",
+    "machine learning developer": "Machine Learning Engineer",
+
+    "ai engineer": "AI Engineer",
+    "ai/ml engineer": "AI/ML Engineer",
+    "aiml engineer": "AI/ML Engineer",
+    "ai ml engineer": "AI/ML Engineer",
+
+    # Software
+    "software developer": "Software Developer",
+    "software engineer": "Software Engineer",
+    "sde": "Software Engineer",
+
+    # DevOps / Cloud
+    "devops": "DevOps Engineer",
+    "devops engineer": "DevOps Engineer",
+
+    "cloud": "Cloud Engineer",
+    "cloud engineer": "Cloud Engineer",
+
+    # Database
+    "database developer": "Database Developer",
+    "database administrator": "Database Administrator",
+    "dba": "Database Administrator",
+
+    # Cybersecurity
+    "cyber security": "Cybersecurity Analyst",
+    "cybersecurity": "Cybersecurity Analyst",
+    "cybersecurity analyst": "Cybersecurity Analyst",
+
+    # Mobile
+    "mobile developer": "Mobile App Developer",
+    "mobile app developer": "Mobile App Developer"
+}
+def get_role_skills(title: str):
+
+    normalized_title = title.strip().lower()
+
+    # Exact role match
+    for role in JOB_ROLES:
+        if role.lower() == normalized_title:
+            return role, JOB_ROLES[role]
+
+    # Alias match
+    if normalized_title in ROLE_ALIASES:
+        role = ROLE_ALIASES[normalized_title]
+        return role, JOB_ROLES[role]
+
+    return None, None
+
 @app.get("/job-requirements")
-def job_requirements(
-    title: str
-):
+def job_requirements(title: str):
 
-    required_skills = JOB_ROLES.get(
-        title
-    )
+    normalized_title = title.strip().lower()
 
-    if required_skills is None:
+    # Direct role match
+    for role in JOB_ROLES:
+
+        if role.lower() == normalized_title:
+
+            return {
+                "title": role,
+                "required_skills": JOB_ROLES[role]
+            }
+
+    # Alias match
+    if normalized_title in ROLE_ALIASES:
+
+        role = ROLE_ALIASES[normalized_title]
 
         return {
-            "error": "Job role not found"
+            "title": role,
+            "required_skills": JOB_ROLES[role]
         }
 
     return {
-        "title": title,
-        "required_skills": required_skills
+        "error": "Job role not found",
+        "message": "Try a common job title such as Frontend Developer, Python Developer, Data Analyst, or AI/ML Engineer."
     }
 
 
@@ -421,292 +676,18 @@ def extract_skills(text):
 
 def extract_job_skills(job_description):
     """
-    Detect skills from either:
-    1. A job role such as "Frontend Developer"
-    2. A complete job description
+    Detect skills from a supported role/alias or a full job description.
     """
 
-    text = job_description.lower().strip()
+    text = job_description.strip().lower()
 
-    # =========================================================
-    # ROLE -> REQUIRED SKILLS
-    # =========================================================
+    # First try the shared role + alias system
+    normalized_role, role_skills = get_role_skills(job_description)
 
-    role_skills = {
+    if role_skills:
+        return role_skills
 
-        # ---------------- FRONTEND ----------------
-        "frontend developer": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Git"
-        ],
-
-        "front end developer": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Git"
-        ],
-
-        "web developer": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Git"
-        ],
-
-        # ---------------- BACKEND ----------------
-        "backend developer": [
-            "Python",
-            "FastAPI",
-            "Flask",
-            "SQL",
-            "REST API",
-            "Git"
-        ],
-
-        "back end developer": [
-            "Python",
-            "FastAPI",
-            "Flask",
-            "SQL",
-            "REST API",
-            "Git"
-        ],
-
-        "python developer": [
-            "Python",
-            "FastAPI",
-            "Flask",
-            "SQL",
-            "REST API",
-            "Git"
-        ],
-
-        # ---------------- FULL STACK ----------------
-        "full stack developer": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Python",
-            "FastAPI",
-            "SQL",
-            "REST API",
-            "Git"
-        ],
-
-        "fullstack developer": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Python",
-            "FastAPI",
-            "SQL",
-            "REST API",
-            "Git"
-        ],
-
-        # ---------------- DATA ----------------
-        "data analyst": [
-            "Python",
-            "SQL",
-            "Excel",
-            "Pandas",
-            "Statistics",
-            "Power BI"
-        ],
-
-        "data scientist": [
-            "Python",
-            "SQL",
-            "Pandas",
-            "NumPy",
-            "Statistics",
-            "Machine Learning"
-        ],
-
-        # ---------------- AI / ML ----------------
-        "machine learning engineer": [
-            "Python",
-            "Machine Learning",
-            "Statistics",
-            "TensorFlow",
-            "PyTorch",
-            "SQL",
-            "Git"
-        ],
-
-        "machine learning developer": [
-            "Python",
-            "Machine Learning",
-            "Statistics",
-            "TensorFlow",
-            "PyTorch",
-            "SQL",
-            "Git"
-        ],
-
-        "ai engineer": [
-            "Python",
-            "Machine Learning",
-            "Deep Learning",
-            "TensorFlow",
-            "PyTorch",
-            "SQL",
-            "Git"
-        ],
-
-        "ai/ml engineer": [
-            "Python",
-            "Machine Learning",
-            "Deep Learning",
-            "TensorFlow",
-            "PyTorch",
-            "SQL",
-            "Git"
-        ],
-
-        "aiml engineer": [
-            "Python",
-            "Machine Learning",
-            "Deep Learning",
-            "TensorFlow",
-            "PyTorch",
-            "SQL",
-            "Git"
-        ],
-
-        # ---------------- SOFTWARE ----------------
-        "software developer": [
-            "Python",
-            "SQL",
-            "Git",
-            "REST API",
-            "Data Structures and Algorithms"
-        ],
-
-        "software engineer": [
-            "Python",
-            "SQL",
-            "Git",
-            "REST API",
-            "Data Structures and Algorithms"
-        ],
-
-        # ---------------- DEVOPS / CLOUD ----------------
-        "devops engineer": [
-            "Linux",
-            "Docker",
-            "Kubernetes",
-            "Git",
-            "AWS"
-        ],
-
-        "cloud engineer": [
-            "AWS",
-            "Linux",
-            "Docker",
-            "Git"
-        ],
-
-        # ---------------- DATABASE ----------------
-        "database administrator": [
-            "SQL",
-            "MySQL",
-            "PostgreSQL",
-            "Linux"
-        ],
-
-        "database developer": [
-            "SQL",
-            "MySQL",
-            "PostgreSQL"
-        ],
-
-        # ---------------- CYBERSECURITY ----------------
-        "cybersecurity analyst": [
-            "Linux",
-            "Networking",
-            "Python",
-            "SQL"
-        ],
-
-        # ---------------- MOBILE ----------------
-        "mobile app developer": [
-            "JavaScript",
-            "React"
-        ],
-
-        # ---------------- JAVA ----------------
-        "java developer": [
-            "Java",
-            "SQL",
-            "Spring Boot",
-            "REST API",
-            "Git"
-        ]
-    }
-
-    # =========================================================
-    # NORMALIZE ROLE INPUT
-    # =========================================================
-
-    role_aliases = {
-
-        "frontend": "frontend developer",
-        "front end": "frontend developer",
-        "front-end developer": "frontend developer",
-        "front end developer": "frontend developer",
-
-        "backend": "backend developer",
-        "back end": "backend developer",
-        "back-end developer": "backend developer",
-        "back end developer": "backend developer",
-
-        "fullstack": "full stack developer",
-        "full-stack developer": "full stack developer",
-
-        "python": "python developer",
-
-        "data analytics": "data analyst",
-        "data analysis": "data analyst",
-
-        "ml engineer": "machine learning engineer",
-        "ml developer": "machine learning developer",
-
-        "ai engineer": "ai engineer",
-        "ai ml engineer": "ai/ml engineer",
-        "ai/ml": "ai/ml engineer"
-    }
-
-    # Check direct alias
-    if text in role_aliases:
-        text = role_aliases[text]
-
-    # Check exact role
-    if text in role_skills:
-        return role_skills[text]
-
-    # Check whether a role appears inside the input
-    # Example:
-    # "I am looking for a frontend developer"
-    # "Looking for Python Developer"
-    for role, skills in role_skills.items():
-
-        if role in text:
-            return skills
-
-    # =========================================================
-    # FALLBACK:
-    # EXTRACT SKILLS FROM A FULL JOB DESCRIPTION
-    # =========================================================
-
+    # Fallback for complete job descriptions
     available_skills = [
         "Python",
         "Java",
@@ -735,17 +716,16 @@ def extract_job_skills(job_description):
         "Kubernetes",
         "Linux",
         "Azure",
-        "GCP"
+        "GCP",
     ]
 
-    found_skills = []
+    return [
+        skill
+        for skill in available_skills
+        if skill.lower() in text
+    ]
 
-    for skill in available_skills:
 
-        if skill.lower() in text:
-            found_skills.append(skill)
-
-    return found_skills
 # =========================================================
 # ANALYZE RESUME AGAINST CUSTOM JOB DESCRIPTION
 # =========================================================
@@ -782,9 +762,15 @@ def analyze_custom_job(
     )
 
     # Extract skills from job description
-    required_skills = extract_job_skills(
-        job_description
-    )
+    normalized_role, role_skills = get_role_skills(job_description)
+
+    if role_skills:
+        job_title = normalized_role
+        required_skills = role_skills
+    else:
+        required_skills = extract_job_skills(
+            job_description
+        )
 
     resume = {
         skill.lower()
@@ -819,7 +805,7 @@ def analyze_custom_job(
     # Save analysis
     analysis = models.Analysis(
         resume_id=resume_record.id,
-        job_title="Custom Job Description",
+        job_title=job_description,
         match_percentage=match_percentage,
         matched_skills=", ".join(
             sorted(matched)
@@ -839,7 +825,7 @@ def analyze_custom_job(
     return {
         "analysis_id": analysis.id,
         "resume_id": resume_record.id,
-        "job_title": "Custom Job Description",
+        "job_title": job_description,
         "required_skills": sorted(required),
         "resume_skills": sorted(resume),
         "match_percentage": match_percentage,
@@ -931,22 +917,21 @@ def analyze_resume(
     db: Session = Depends(get_db)
 ):
 
-    required_skills = JOB_ROLES.get(
-        job_title
-    )
+    normalized_role, required_skills = get_role_skills(job_title)
 
     if required_skills is None:
-
         return {
-            "error": "Job role not found"
+            "error": "Job role not found",
+            "message": "Please enter a supported job role."
         }
+
+    job_title = normalized_role
 
     resume = {
         skill.strip().lower()
-        for skill in resume_skills.split(",")
+        for skill in resume_skills.split(',')
         if skill.strip()
     }
-
     required = {
         skill.strip().lower()
         for skill in required_skills
@@ -1014,10 +999,11 @@ def analyze_resume(
 def get_analyses(
     db: Session = Depends(get_db)
 ):
-
-    analyses = db.query(
-        models.Analysis
-    ).all()
+    analyses = (
+        db.query(models.Analysis)
+        .order_by(models.Analysis.id.desc())
+        .all()
+    )
 
     return [
 
@@ -1060,15 +1046,15 @@ def analyze_uploaded_resume(
             "error": "Resume not found"
         }
 
-    required_skills = JOB_ROLES.get(
-        job_title
-    )
+    normalized_role, required_skills = get_role_skills(job_title)
 
     if required_skills is None:
-
         return {
-            "error": "Job role not found"
+            "error": "Job role not found",
+            "message": "Please enter a supported job role."
         }
+
+    job_title = normalized_role
 
     resume_skills = extract_skills(
         resume_record.resume_text or ""
@@ -1268,15 +1254,15 @@ async def upload_and_analyze(
     db: Session = Depends(get_db)
 ):
 
-    required_skills = JOB_ROLES.get(
-        job_title
-    )
+    normalized_role, required_skills = get_role_skills(job_title)
 
     if required_skills is None:
-
         return {
-            "error": "Job role not found"
+            "error": "Job role not found",
+            "message": "Please enter a supported job role."
         }
+
+    job_title = normalized_role
 
     upload_folder = "uploads"
 
