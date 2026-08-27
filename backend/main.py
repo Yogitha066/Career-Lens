@@ -21,7 +21,7 @@ import jwt
 
 from datetime import datetime, timedelta, timezone
 
-from .database import Base, engine, get_db
+from database import Base, engine, get_db
 from . import models
 
 
