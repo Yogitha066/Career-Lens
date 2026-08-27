@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f4f8;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 36px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   DASHBOARD BUTTON SPACING
+========================================= */
+
+.dashboard-button {
+  margin-top: 18px;
+}
+
+.dashboard-button button {
+  margin-bottom: 0;
+}
+
+.results-button {
+  margin-top: 30px;
+}
+
+.logout-button {
+  margin-top: 18px;
+}
+
+/* =========================================
+   JOB ANALYSIS
+========================================= */
+
+.analysis-section {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.analysis-section textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
+}
+
+.analyze-button {
+  margin-top: 5px;
+}
+
+.status-message {
+  color: #555;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.results-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.results-box h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.results-box h3 {
+  margin-top: 20px;
+}
+
+.results-box p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.results-box ul {
+  padding-left: 20px;
+}
+
+.results-box li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.link {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p {
+  color: #666;
+  line-height: 1.5;
+}
+.saved-results {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.saved-results > h2 {
+  text-align: center;
+}
+
+.saved-result-card {
+  margin-top: 18px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.saved-result-card h3 {
+  margin-top: 0;
+}
+
+.match-score {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.saved-result-card p {
+  line-height: 1.5;
+}
+.job-role-input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
